@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  main-gateway:
+    container_name: main-gateway
+    build: .
+    ports:
+      - "8181:8181"
