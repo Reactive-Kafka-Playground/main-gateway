@@ -8,6 +8,6 @@ public class MainGatewayController {
 
     @RequestMapping("/test")
     public String home() {
-        return "Hello reactive";
+        return "Hello reactive..";
     }
 }
