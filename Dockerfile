@@ -1,4 +1,5 @@
-FROM openjdk:11-jdk-alpine
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+FROM adoptopenjdk/openjdk11:ubi
+RUN mkdir /opt/app
+ARG JAR_FILE=build/libs/main-gateway-0.0.1-SNAPSHOT.jar
+COPY ${JAR_FILE} /opt/app/app.jar
+CMD ["java", "-jar", "/opt/app/app.jar"]
